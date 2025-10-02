@@ -1,0 +1,24 @@
+{
+  "name": "swaglabs-bdd",
+  "version": "1.0.0",
+  "description": "Playwright + Cucumber BDD for Swag Labs",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require ./support/world.ts --require ./support/hooks.ts --require ./step-definitions/**/*.ts --fail-fast --format html:reports/cucumber-report.html",
+    "test:env": "cross-env ENV=staging cucumber-js --require-module ts-node/register --require ./step-definitions/**/*.ts --publish-quiet"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^24.5.2",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.4.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "playwright": "^1.44.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}
